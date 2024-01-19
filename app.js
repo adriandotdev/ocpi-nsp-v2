@@ -23,4 +23,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("combined", { stream: winston.stream }));
 app.use(cookieParser());
 
+require("./api/defaults.api")(app);
+
 module.exports = app;
